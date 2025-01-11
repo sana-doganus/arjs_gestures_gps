@@ -37,26 +37,14 @@
     <script src="https://unpkg.com/aframe-gps-entity-component/dist/aframe-gps-entity-component.min.js"></script>
     <style>
         body { margin: 0; }
-        #gps-info { position: absolute; top: 10px; left: 10px; color: white; }
     </style>
 </head>
 <body>
     <a-scene>
         <a-entity gps-entity-place="latitude: 56.84505; longitude: 62.7665" >
-            <a-sphere color="red" radius="2"></a-sphere>
+            <a-sphere color="red" radius="0.25"></a-sphere>
         </a-entity>
-
-        <a-camera></a-camera>
+        <a-camera gps-camera rotation-reader></a-camera>
     </a-scene>
-    <div id="gps-info"></div>
-  <script>
-    navigator.geolocation.getCurrentPosition(function(position) {
-        const latitude = position.coords.latitude;
-        const longitude = position.coords.longitude;
-        document.getElementById('gps-info').innerText = `Latitude: ${latitude}, Longitude: ${longitude}`;
-    }, function(error) {
-        console.error("Error getting location: ", error);
-    });
-</script>
 </body>
 </html>
