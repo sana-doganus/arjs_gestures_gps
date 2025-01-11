@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!--
 <html>
   <head>
     <title>Gesture Interactions - A-Frame & AR.js</title>
@@ -18,18 +17,23 @@
       embedded
       arjs="sourceType: webcam; debugUIEnabled: false;"
     >
-      <a-text
+      <!--<a-text
         value="HELLO"
         look-at="[gps-camera]"
         scale="50 50 50"
         gps-entity-place="latitude: 56.84505; longitude: 62.7665;"
-      ></a-text>
+      ></a-text>-->
+
+      <a-entity gps-entity-place="latitude: 56.84505; longitude: 62.7665" >
+            <a-sphere color="red" radius="0.25"></a-sphere>
+        </a-entity>
       <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
   </body>
 </html>
--->
-<!DOCTYPE html>
+
+
+<!--<!DOCTYPE html>
 <html>
 <head>
     <title>GPS Markers with A-Frame</title>
@@ -47,4 +51,4 @@
         <a-camera gps-camera rotation-reader></a-camera>
     </a-scene>
 </body>
-</html>
+</html>-->
